@@ -5,6 +5,17 @@ import org.junit.jupiter.api.Test
 
 internal class GildedRoseTest {
     @Test
+    fun `At the end of each day our system lowers SellIn and Quality values for every item`() {
+        val items = arrayOf<Item>(
+                Item("Elixir of the Mongoose", 10, 10),
+        )
+        val app = GildedRose(items)
+        app.updateQuality()
+        assertEquals(9, app.items[0].quality)
+        assertEquals(9, app.items[0].sellIn)
+    }
+
+    @Test
     fun `Once the sell by date has passed, Quality degrades twice as fast`() {
         val items = arrayOf<Item>(
                 Item("Elixir of the Mongoose", 1, 10),
