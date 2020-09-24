@@ -147,10 +147,10 @@ internal class GildedRoseTest {
         app.updateQuality()
         assertEquals(8, app.items[0].quality)
         assertEquals(9, app.items[0].sellIn)
-        assertEquals(4, app.items[0].quality)
-        assertEquals(-1, app.items[0].sellIn)
-        assertEquals(0, app.items[0].quality)
-        assertEquals(-1, app.items[0].sellIn)
+        assertEquals(2, app.items[1].quality)
+        assertEquals(-1, app.items[1].sellIn)
+        assertEquals(0, app.items[2].quality)
+        assertEquals(-1, app.items[2].sellIn)
     }
 }
 
