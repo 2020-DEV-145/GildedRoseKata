@@ -9,31 +9,31 @@ internal class ItemWrapperFactoryTest {
     private val itemWrapperFactory = ItemWrapperFactory()
 
     @Test
-    fun `Basic Item has a BASIC ItemType`() {
+    fun `Basic Item is wrapped with a BasicItemWrapper`() {
         val item = Item("Elixir of the Mongoose", 10, 10)
         assertTrue(itemWrapperFactory.getItemWrapper(item) is Basic)
     }
 
     @Test
-    fun `Backstage passes Item has a BACKSTAGE_PASSES ItemType`() {
+    fun `Backstage passes is wrapped with a BackstagePasses`() {
         val item = Item("Backstage passes", 10, 10)
         assertTrue(itemWrapperFactory.getItemWrapper(item) is BackstagePasses)
     }
 
     @Test
-    fun `Sulfuras Item has a SULFURAS ItemType`() {
+    fun `Sulfuras Item is wrapped with a Sulfuras`() {
         val item = Item("Sulfuras, Hand of Ragnaros", 10, 10)
         assertTrue(itemWrapperFactory.getItemWrapper(item) is Sulfuras)
     }
 
     @Test
-    fun `Aged Brie Item has a AGED_BRIE ItemType`() {
+    fun `Aged Brie Item is wrapped with a AgedBrie`() {
         val item = Item("Aged Brie", 10, 10)
         assertTrue(itemWrapperFactory.getItemWrapper(item) is AgedBrie)
     }
 
     @Test
-    fun `Conjured Item has a CONJURED ItemType`() {
+    fun `Conjured Item is wrapped with a Conjured`() {
         val item = Item("Conjured Mana Cake", 10, 10)
         assertTrue(itemWrapperFactory.getItemWrapper(item) is Conjured)
     }
