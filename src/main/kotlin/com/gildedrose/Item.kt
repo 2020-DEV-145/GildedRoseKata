@@ -13,12 +13,3 @@ open class Item(var name: String, var sellIn: Int, var quality: Int) {
 
 val Item.IsOutOfDate: Boolean
     get() = sellIn < 0
-
-val Item.type: ItemType
-    get() = when {
-        name == "Sulfuras, Hand of Ragnaros" -> ItemType.SULFURAS
-        name == "Aged Brie" -> ItemType.AGED_BRIE
-        name.contains("Backstage passes") -> ItemType.BACKSTAGE_PASSES
-        name.contains("Conjured") -> ItemType.CONJURED
-        else -> ItemType.BASIC
-    }

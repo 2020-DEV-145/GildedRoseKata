@@ -1,13 +1,13 @@
 package com.gildedrose
 
-import com.gildedrose.updateStrategy.UpdateStrategyFactory
+import com.gildedrose.itemWrapper.ItemWrapperFactory
 
 class GildedRose(var items: Array<Item>) {
-    private val updateStrategyFactory = UpdateStrategyFactory()
+    private val itemWrapperFactory = ItemWrapperFactory()
 
     fun updateQuality() {
         items.forEach { item ->
-            updateStrategyFactory.getUpdateStrategy(item.type).updateItem(item)
+            itemWrapperFactory.getItemWrapper(item).updateItem()
         }
     }
 }
